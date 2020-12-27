@@ -34,6 +34,10 @@ AFRAME.registerComponent('dynamic', {
 		if (!room)
 			room = url.pathname.split('/')[1];
 
+		// last chance
+		if (!room)
+			room = "default";
+
 		let html_src = host + room + ".html";
 		console.log("loading dynamic content: ", html_src);
 
